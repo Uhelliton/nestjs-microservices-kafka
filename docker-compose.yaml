@@ -1,6 +1,12 @@
 version: '3'
 
 services:
+  nestjs-kafka:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
   zookeeper:
     image: confluentinc/cp-zookeeper:7.3.0
     hostname: zookeeper
